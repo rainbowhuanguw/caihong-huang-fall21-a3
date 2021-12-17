@@ -2,6 +2,8 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { jobAPIs } from '../apis/backend';
 import './FavoriteButton.css'
+import red_heart from './img/red-heart.png';
+import white_heart from './img/white-heart.png';
 
 export default function FavoriteButton(props) {
     // check if this job has been favorited
@@ -42,7 +44,7 @@ export default function FavoriteButton(props) {
         }
     }
 
-    const sourceLink = isFavorited === true ? './red-heart.png' : './white-heart.png';
+    const sourceLink = isFavorited === true ? red_heart : white_heart;
 
     return <button onClick={handleFavorite} class="favorite-button">
         <img src={sourceLink} class="favorite-button"/> 
