@@ -42,7 +42,7 @@ export default function FavoriteButton(props) {
         }
     }
 
-    const sourceLink = isFavorited === true ? '/pics/red-heart.png' : '/pics/white-heart.png';
+    const sourceLink = isFavorited === true ? './red-heart.png' : './white-heart.png';
 
     return <button onClick={handleFavorite} class="favorite-button">
         <img src={sourceLink} class="favorite-button"/> 
